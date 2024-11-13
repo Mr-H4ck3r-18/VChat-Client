@@ -10,6 +10,7 @@ export default function AccountProvider({ children }) {
     const [person, setPerson] = useState({})
     const [activeUsers, setActiveUsers] = useState([])
     const [newMsg, setNewMsg] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         socket.current = io('ws://localhost:9000')
@@ -26,7 +27,7 @@ export default function AccountProvider({ children }) {
 
     }, [account])
     return (
-        <AuthContext.Provider value={{ account, setAccount, person, setPerson, socket, activeUsers, setActiveUsers, newMsg, setNewMsg }}>
+        <AuthContext.Provider value={{ account, setAccount, person, setPerson, socket, activeUsers, setActiveUsers, newMsg, setNewMsg, loading, setLoading }}>
             {children}
         </AuthContext.Provider>
     )

@@ -44,7 +44,7 @@ export default function Conversation({ user }) {
                 <Box sx={{ width: "100%" }}>
                     <Typography>{user.given_name}</Typography>
                     <Box sx={{ display: "flex" }}>
-                        <Message>{msg?.text && msg?.text?.includes("localhost") ? 'media' : msg.text}</Message>
+                        <Message>{msg?.text && msg?.text?.includes("vchat-server") ? 'media' : msg.text}</Message>
                         <Typography sx={{ ml: "auto", fontSize: "12px", color: "#00000099" }}>{msg?.text && formatDate(msg.tmstmp)}</Typography>
                     </Box>
                 </Box>
