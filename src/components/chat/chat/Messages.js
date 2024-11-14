@@ -93,8 +93,8 @@ export default function Messages({ person, conversationId }) {
             <Container >
                 {
                     messages && messages.map(message => (
-                        <Wrapper key={message._id} ref={Scroll}>
-                            <Message key={message._id} message={message} sender={account.sub} />
+                        <Wrapper key={message.updatedAt} ref={Scroll}>
+                            <Message message={message} sender={account.sub} />
                         </Wrapper>
 
                     ))

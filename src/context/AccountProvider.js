@@ -13,7 +13,7 @@ export default function AccountProvider({ children }) {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        socket.current = io('ws://localhost:9000')
+        socket.current = io('https://vchat-socket.onrender.com')
 
         socket.current.on("connect", () => {
             if (account) {
