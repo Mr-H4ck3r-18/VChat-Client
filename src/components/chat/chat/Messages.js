@@ -84,7 +84,6 @@ export default function Messages({ person, conversationId }) {
 
     useEffect(() => {
         incomingMessage && conversationId?.members?.includes(incomingMessage.senderId) && setMessages(prev => [...prev, incomingMessage]);
-        setNewMsg(true)
     }, [conversationId, incomingMessage])
 
 

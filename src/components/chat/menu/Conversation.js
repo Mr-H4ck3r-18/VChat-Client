@@ -35,7 +35,7 @@ export default function Conversation({ user }) {
             setMsg({ text: data?.message, tmstmp: data?.updatedAt })
         }
         getConversationDetails();
-    }, [newMsg])
+    }, [newMsg, account.sub, user.sub])
 
     return (
         <>
